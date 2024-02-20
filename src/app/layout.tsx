@@ -16,7 +16,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {" "}
+        <main className="flex min-h-screen md:flex-row items-center flex-col justify-between">
+          {/* Video */}
+          <div className="md:w-1/2 md:h-screen overflow-hidden">{children}</div>
+          {/* Other */}
+          <div className="md:w-1/2 md:h-screen flex flex-col items-center justify-center p-24 space-y-4 text-center bg-red-100">
+            <h1 className="text-black">Other stuff</h1>
+          </div>
+        </main>
+      </body>
     </html>
   );
 }
